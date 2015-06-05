@@ -4,3 +4,5 @@ all:
 clean:
 	rm -fr GoogleAPIs/bin
 	rm -fr GoogleAPIs/obj
+	rm -fr GoogleSignIn/bin
+	rm -fr GoogleSignIn/obj
