@@ -237,6 +237,20 @@ namespace Google.iOS
         // - (void)disconnect;
         [Export ("disconnect")]
         void Disconnect ();
+
+        // The client ID of the app from the Google APIs console. Must set for sign-in to work.
+        // - (NSString*) clientID
+        [Export ("clientID")]
+        string ClientID { get; }
+
+
+        // The API scopes requested by the app in an array of NSStrings.
+        // The default value is @[].
+        // This property is optional. If you set it, set it before calling signIn.
+        // - (NSArray*) scopes
+        [Export ("scopes")]
+        string[] Scopes { get; set; }
+
     }
 
 }
