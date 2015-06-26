@@ -206,7 +206,7 @@ namespace Google.iOS
         // sourceApplication:(NSString *)sourceApplication
         // annotation:(id)annotation;
         [Export ("handleURL:sourceApplication:annotation:")]
-        bool HandleURL (NSUrl url, string sourceApplication, NSObject annotation);
+        bool HandleURL (NSUrl url, string sourceApplication, [NullAllowed] NSObject annotation);
 
         // Returns a shared |GIDSignIn| instance.
         // + (GIDSignIn *)sharedInstance;
