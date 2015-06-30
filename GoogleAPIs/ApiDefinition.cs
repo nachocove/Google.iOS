@@ -10,19 +10,6 @@ namespace Google.iOS
     
     // For more information, see http://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/
 
-    [BaseType (typeof(NSObject))]
-    interface GGLContext
-    {
-        // - (void)configureWithError:(NSError **)error;
-        [Export ("configureWithError:")]
-        void ConfigureWithError (ref NSError error);
-
-        // Get the shared instance of the GGLContext.
-        // + (instancetype)sharedInstance;
-        [Static, Export ("sharedInstance")]
-        GGLContext SharedInstance { get; }
-    }
-
     [BaseType (typeof(NSObject), Name = "GIDGoogleUser")]
     interface GIDGoogleUser
     {
@@ -171,7 +158,6 @@ namespace Google.iOS
     [BaseType (typeof(UIControl), Name = "GIDSignInButton")]
     interface GIDSignInButton
     {
-
         [Export ("setStyle:")]
         void SetStyle (GIDSignInButtonStyle style);
 
@@ -241,7 +227,7 @@ namespace Google.iOS
         // The client ID of the app from the Google APIs console. Must set for sign-in to work.
         // - (NSString*) clientID
         [Export ("clientID")]
-        string ClientID { get; }
+        string ClientID { get; set; }
 
 
         // The API scopes requested by the app in an array of NSStrings.

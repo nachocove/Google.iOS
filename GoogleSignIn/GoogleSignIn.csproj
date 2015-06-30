@@ -38,7 +38,7 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <MtouchExtraArgs>-gcc_flags="-ObjC -framework AddressBook -framework SystemConfiguration -framework StoreKit"</MtouchExtraArgs>
+    <MtouchExtraArgs>-gcc_flags="-ObjC -framework CoreText -framework Security -framework AddressBook -framework SystemConfiguration -framework StoreKit"</MtouchExtraArgs>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n>
     </MtouchI18n>
@@ -67,7 +67,7 @@
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchExtraArgs>-gcc_flags="-ObjC -framework AddressBook -framework SystemConfiguration -framework StoreKit"</MtouchExtraArgs>
+    <MtouchExtraArgs>-gcc_flags="-ObjC -framework CoreText -framework Security -framework AddressBook -framework SystemConfiguration -framework StoreKit"</MtouchExtraArgs>
     <MtouchUseRefCounting>true</MtouchUseRefCounting>
     <MtouchI18n>
     </MtouchI18n>

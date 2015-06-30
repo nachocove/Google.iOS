@@ -26,12 +26,8 @@ namespace GoogleSignIn
             navigationController.TopViewController.NavigationItem.LeftBarButtonItem = splitViewController.DisplayModeButtonItem;
             splitViewController.WeakDelegate = this;
 
-            var error = new NSError ();
-            var instance = GGLContext.SharedInstance;
-            instance.ConfigureWithError (ref error);
-            if (null != error) {
-                Console.WriteLine ("ConfigureWithError: {0}", error);
-            }
+            var googleInfo = NSDictionary.FromFile("GoogleService-Info.plist");
+            GIDSignIn.SharedInstance.ClientID = googleInfo[new NSString("CLIENT_ID")].ToString();
 
             return true;
         }
