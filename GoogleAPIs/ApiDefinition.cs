@@ -229,6 +229,17 @@ namespace Google.iOS
         [Export ("clientID")]
         string ClientID { get; set; }
 
+        // Whether or not to switch to Chrome or Safari if no suitable Google apps are installed.
+        // Defaults to |YES|.
+        // @property(nonatomic, assign) BOOL allowsSignInWithBrowser;
+        [Export ("allowsSignInWithBrowser")]
+        bool AllowsSignInWithBrowser { get; set; }
+
+        // Whether or not to support sign-in via a web view.
+        // Defaults to |YES|.
+        // @property(nonatomic, assign) BOOL allowsSignInWithWebView;
+        [Export ("allowsSignInWithWebView")]
+        bool AllowsSignInWithWebView { get; set; }
 
         // The API scopes requested by the app in an array of NSStrings.
         // The default value is @[].
